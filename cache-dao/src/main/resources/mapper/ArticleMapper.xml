@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.halo.mapper.ArticleMapper">
+
+    <resultMap id="BaseResultMap" type="com.halo.entity.Article">
+            <id property="id" column="id" jdbcType="VARCHAR"/>
+            <result property="title" column="title" jdbcType="VARCHAR"/>
+            <result property="content" column="content" jdbcType="VARCHAR"/>
+            <result property="articleType" column="article_type" jdbcType="INTEGER"/>
+            <result property="articleCover" column="article_cover" jdbcType="VARCHAR"/>
+            <result property="readCounts" column="read_counts" jdbcType="INTEGER"/>
+            <result property="commentCounts" column="comment_counts" jdbcType="INTEGER"/>
+            <result property="publishTime" column="publish_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,title,content,
+        article_type,article_cover,read_counts,
+        comment_counts,publish_time
+    </sql>
+
+</mapper>

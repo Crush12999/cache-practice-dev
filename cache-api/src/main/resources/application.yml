@@ -1,0 +1,16 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: cache-practice
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: assign_id    # 全局分布式id（雪花算法）
+      update-strategy: not_empty
+    banner: false
+  mapper-locations: classpath*:/mapper/*.xml
